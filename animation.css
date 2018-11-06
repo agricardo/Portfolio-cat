@@ -1,0 +1,50 @@
+.tuna {
+    /* use the timing function steps() to chunk the animation into 12 equal pieces */
+    background: url(img/cat_sprite.png) 0 0 no-repeat;
+    height: 200px;
+    width: 400px;
+    margin: auto;
+    animation: tuna-walk-cycle 1s steps(12) 3,
+     convert 1s steps(12) 1 2s,
+      run 1s steps(13) infinite 3s,
+      movement 10s linear infinite;
+}
+
+@keyframes tuna-walk-cycle {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 0 -2400px;
+    }
+}
+
+@keyframes convert {
+    0% {
+        background-position: -400px 0;
+    }
+    100% {
+        background-position: -400px -2400px;
+    }
+}
+
+@keyframes run {
+    0% {
+        background-position: -800px 0;
+    }
+    100% {
+        background-position: -800px -2591px;
+    }
+}
+
+@keyframes movement {
+    0% {
+        left: 500px;
+     
+    }
+    100% {
+        left: -400px;
+       
+    }
+  }
+
